@@ -2,7 +2,7 @@
 #include <iostream>
 #include "memory_check.h"
 
-struct Bond{    //James Bond
+struct Bond{    
     int Coral_id;
     char cord_one;
     char cord_two;
@@ -375,7 +375,7 @@ void Move(int id, char s_one, char s_two,char s_three, char d_one, char d_two, c
             break;
         }
     }
-    //Delete(s_one,s_two,s_three,id,head);//nie uzywac zamienic bo wyskakuje blad!
+    
 
     if(dCord->coral == NULL){
         tempCoral->next = NULL;
@@ -578,7 +578,7 @@ int main(){
         delete temp;
         todelete = del;
     }
-    //delete head;
+    
 _MemoryCheck();
     return 0;
 }
