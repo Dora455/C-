@@ -179,7 +179,7 @@ void CoralConnection( int startID, int endID, char startO, char startT, char sta
     currB->cord_two = endT;
     currB->cord_three = endH;
     currB->next = NULL;
-    if(tempCoral->b_head == NULL){ //pusta lista wiezi
+    if(tempCoral->b_head == NULL){ 
         tempCoral->b_head = currB;
     }
     else{
@@ -450,7 +450,7 @@ void Remove(char id_o, char id_t, char id_th, Cord** head){
             Bond* temp = startCoral->b_head;
             for(Bond* startB = startCoral->b_head; startB != NULL; startB = startB->next){
                 if( startB->cord_one == id_o && startB->cord_two == id_t && startB->cord_three == id_th){
-                    if(startB->next == NULL && startB == startCoral->b_head){//starB == startCoral->next
+                    if(startB->next == NULL && startB == startCoral->b_head){
                         startCoral->b_head = NULL;
                         if(startB != NULL){
                             delete startB;
