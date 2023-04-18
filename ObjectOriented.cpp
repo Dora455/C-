@@ -465,7 +465,7 @@ void TREE_CLASS::growthTree(void){
     }
     if(tree_height%3==0){
         if(branch_head == NULL){
-            BRANCH_CLASS* newBranch = new BRANCH_CLASS(tree_height,0,this);//,NULL,branch_last);
+            BRANCH_CLASS* newBranch = new BRANCH_CLASS(tree_height,0,this);
             newBranch->setNextBranch(NULL);
             newBranch->setPrevBranch(NULL);
             branch_head=newBranch;
@@ -473,7 +473,7 @@ void TREE_CLASS::growthTree(void){
         }
         else{
     
-        BRANCH_CLASS* newBranch = new BRANCH_CLASS(tree_height,0,this);//,NULL,branch_last);
+        BRANCH_CLASS* newBranch = new BRANCH_CLASS(tree_height,0,this);
         branch_last->setNextBranch(newBranch);
         newBranch->setNextBranch(NULL);
         newBranch->setPrevBranch(branch_last);
@@ -1079,7 +1079,7 @@ BRANCH_CLASS::BRANCH_CLASS(BRANCH_CLASS& branch){
     next = NULL;
     prev = NULL;
     this_tree = branch.this_tree;
-    if(branch.fruit_head == NULL){      //sprawdzam czy ma owoce?
+    if(branch.fruit_head == NULL){      
         fruit_head=NULL;
         fruit_last=NULL;
     }
